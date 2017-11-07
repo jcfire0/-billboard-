@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import requests
 from bs4 import BeautifulSoup
 import re
@@ -17,9 +18,15 @@ def getsonglist(page):
     k=1
     poo=re.findall(po,p)
     pii=re.findall(pi,p)
-    for i in range(0,100):
-        print u'第'+str(k)+'  '+poo[i]+'  '+pii[i]
-        k=k+1
+    try:
+      with open('billboard.txt','w') as f:
+        for i in range(0,100):
+          print ('第'+str(k)+'  '+poo[i]+'        '+pii[i]+'\n')
+          k=k+1
+      print u'成功'
+    except:
+      print u'失败'
+        
 
 
 class main():
