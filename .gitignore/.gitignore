@@ -21,7 +21,7 @@ def getsonglist(page):
     try:
       with open('billboard.txt','w') as f:
         for i in range(0,100):
-          print ('第'+str(k)+'  '+poo[i]+'        '+pii[i]+'\n')
+          print ('第'+str(k)+':'+'    '+poo[i]+'        '+pii[i]+'\n')
           k=k+1
       print u'成功'
     except:
